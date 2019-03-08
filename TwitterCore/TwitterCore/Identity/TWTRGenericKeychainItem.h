@@ -224,7 +224,7 @@ extern NSString *const TWTRGenericKeychainItemErrorDomain;
  * is YES the value will be replaced. If this parameter is NO the operation will
  * fail.
  *
- * @param replacesExisting whether an existing value should be replaced, Default = YES
+ * @param replaceExisting whether an existing value should be replaced, Default = YES
  * @param error an optional error that will be set if the operation fails.
  * @return a value representing if the operation was successful
  */
