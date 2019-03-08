@@ -16,29 +16,14 @@
  */
 
 /**
- This header is private to the Twitter Kit SDK and not exposed for public SDK consumption
+ This header is private to the Twitter Core SDK and not exposed for public SDK consumption
  */
 
-#import <UIKit/UIKit.h>
+#import "TWTRResourcesUtil.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@interface TWTRResourcesUtil (Private)
 
-/**
- *  View showing the ad data privacy icon and disclaimer that
- *  the container ad view this is an ad.
- */
-@interface TWTRMoPubAdDisclaimerView : UIView
-
-/**
- *  The privacy icon. Presents webview for MoPub's data privacy FAQ as a modal when tapped.
- */
-@property (nonatomic, readonly) UIImageView *privacyInfoIcon;
-
-/**
- *  Label stating this is promotional content.
- */
-@property (nonatomic, readonly) UILabel *disclaimerLabel;
++ (NSString *)deviceModel;
++ (NSString *)OSVersionString;
 
 @end
-
-NS_ASSUME_NONNULL_END
