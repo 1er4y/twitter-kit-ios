@@ -15,5 +15,5 @@ Pod::Spec.new do |s|
   s.source_files = "TwitterKit/TwitterKit/*.{h,m}", "TwitterKit/TwitterKit/External/Punycode Cocoa/Pod/*.{h,m}", "TwitterKit/TwitterKit/Networking/*.{h,m}", "TwitterKit/TwitterKit/Persistence/*.{h,m}", "TwitterKit/TwitterKit/Resources/*.{h,m}", "TwitterKit/TwitterKit/Social/**/*.{h,m}", "TwitterKit/TwitterKit/Supporting Files/*.{h,m}", "TwitterKit/TwitterKit/TwitterShareExtensionUI/**/*.{h,m}", "TwitterKit/libextobjc/*.{h,m}"
   s.resources = ["TwitterKit/TwitterKitResources.bundle"]
   s.frameworks = "CoreText", "QuartzCore", "CoreData", "CoreGraphics", "Foundation", "Security", "UIKit", "CoreMedia", "AVFoundation", "SafariServices"
-  s.dependency "TwitterCore", ">= 3.2.2"
+  s.dependency "TwitterCore", :git => 'https://github.com/xiao99xiao/twitter-kit-ios.git', :branch => 'master', :podspec => '../TwitterCore/TwitterCore.podspec'
 end
