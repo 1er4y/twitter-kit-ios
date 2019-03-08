@@ -72,9 +72,7 @@
 
 + (void)openURL:(NSURL *)webURL deeplinkURL:(NSURL *)deepLinkURL
 {
-    BOOL iOS10 = [[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)];
-
-    if (iOS10) {
+    if (@available(iOS 10.0, *)) {
         // Attempt Deep-Link
         [[UIApplication sharedApplication] openURL:deepLinkURL
             options:@{}

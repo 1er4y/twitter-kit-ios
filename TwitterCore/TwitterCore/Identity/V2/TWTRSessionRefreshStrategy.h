@@ -59,7 +59,7 @@ typedef void (^TWTRSessionRefreshCompletion)(id _Nullable refreshedSession, NSEr
 /**
  *  Determines whether the session has expired based on the API response error of a previous API request made with the session.
  *
- *  @param response error a previous API request
+ *  @param responseError error of a previous API request
  *
  *  @return YES if the error contains information to indicate the session is invalid or has expired.
  */

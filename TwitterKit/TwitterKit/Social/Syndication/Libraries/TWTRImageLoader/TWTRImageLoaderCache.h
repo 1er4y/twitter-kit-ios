@@ -49,7 +49,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  - resizing/cropping/decoding/sampling for quality
  *
  *  @param key        ID of the image
- *  @param completion completion block to call when it's done fetching
+ *
+ *  @return the imageOrNil associated with the given key
  */
 - (nullable UIImage *)fetchImageForKey:(NSString *)key;
 
@@ -89,7 +90,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Initializes a disk cache with the given path.
  *
  *  @param path     path where cached items are stored
- *  @param maxSize  max size of the disk cache. Older images will be evicted when this limit is reached.
+ *  @param size  max size of the disk cache. Older images will be evicted when this limit is reached.
  *
  *  @return new instance of cacheOrNil at the given path
  */

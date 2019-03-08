@@ -170,13 +170,52 @@ extern NSString *const TWTRGenericKeychainItemErrorDomain;
  * @param service the service for this item.
  * @param account the account associated with this item.
  * @param secret the secret value to store.
+ */
+- (instancetype)initWithService:(NSString *)service account:(NSString *)account secret:(NSData *)secret;
+/**
+ * Initializes a TWTRGenericKeychainItem object with the given values.
+ * This does not automatically save the object, you must call -[TWTRGenericKeychainItem storeInKeychain:]
+ to actually save the object.
+ *
+ * A keychain item is uniquely constrained by the service/account combination. Any action performed
+ * with the keychain item will override any existing keychain items with the given service/account
+ * combination.
+ *
+ * @param service the service for this item.
+ * @param account the account associated with this item.
+ * @param secret the secret value to store.
+ * @param genericValue an additional value to associate with this item.
+ */
+- (instancetype)initWithService:(NSString *)service account:(NSString *)account secret:(NSData *)secret genericValue:(nullable NSString *)genericValue;
+/**
+ * Initializes a TWTRGenericKeychainItem object with the given values.
+ * This does not automatically save the object, you must call -[TWTRGenericKeychainItem storeInKeychain:]
+ to actually save the object.
+ *
+ * A keychain item is uniquely constrained by the service/account combination. Any action performed
+ * with the keychain item will override any existing keychain items with the given service/account
+ * combination.
+ *
+ * @param service the service for this item.
+ * @param account the account associated with this item.
+ * @param secret the secret value to store.
  * @param genericValue an additional value to associate with this item.
  * @param accessGroup the access group for this item. If empty uses the default access group. *
  */
-- (instancetype)initWithService:(NSString *)service account:(NSString *)account secret:(NSData *)secret;
-- (instancetype)initWithService:(NSString *)service account:(NSString *)account secret:(NSData *)secret genericValue:(nullable NSString *)genericValue;
 - (instancetype)initWithService:(NSString *)service account:(NSString *)account secret:(NSData *)secret genericValue:(nullable NSString *)genericValue accessGroup:(nullable NSString *)accessGroup;
 
+/**
+ * Call this method to store the keychain item in the store.
+ *
+ * A TWTRGenericKeychainItem is only unique based on the account
+ * and the service specified. If the item exists and the replaceExisting parameter
+ * is YES the value will be replaced. If this parameter is NO the operation will
+ * fail.
+ *
+ * @param error an optional error that will be set if the operation fails.
+ * @return a value representing if the operation was successful
+ */
+- (BOOL)storeInKeychain:(NSError **)error;
 /**
  * Call this method to store the keychain item in the store.
  *
@@ -189,7 +228,6 @@ extern NSString *const TWTRGenericKeychainItemErrorDomain;
  * @param error an optional error that will be set if the operation fails.
  * @return a value representing if the operation was successful
  */
-- (BOOL)storeInKeychain:(NSError **)error;
 - (BOOL)storeInKeychainReplacingExisting:(BOOL)replaceExisting error:(NSError **)error;
 
 /**

@@ -94,11 +94,21 @@ typedef void (^TWTRSessionStoreUserSessionSavedCompletion)(id<TWTRAuthSession> s
  *  @param APIServiceConfig  (required) API service config for specifying server endpoints
  *  @param refreshStrategies (required) Strategies to use to refresh sessions
  *  @param URLSession        (required) URL session used to make authentication requests
- *  @param accessGroup       (optional) An optional access group to use for persistence to the store.
  *
  *  @return A fully initialized session store.
  */
 - (instancetype)initWithAuthConfig:(TWTRAuthConfig *)authConfig APIServiceConfig:(id<TWTRAPIServiceConfig>)APIServiceConfig refreshStrategies:(NSArray *)refreshStrategies URLSession:(NSURLSession *)URLSession;
+/**
+ *  Designated initializer for creating a new session store.
+ *
+ *  @param authConfig        (required) Auth config containing the app `consumerKey` and `consumerSecret`
+ *  @param APIServiceConfig  (required) API service config for specifying server endpoints
+ *  @param refreshStrategies (required) Strategies to use to refresh sessions
+ *  @param URLSession        (required) URL session used to make authentication requests
+ *  @param accessGroup       (optional) An optional access group to use for persistence to the store.
+ *
+ *  @return A fully initialized session store.
+ */
 - (instancetype)initWithAuthConfig:(TWTRAuthConfig *)authConfig APIServiceConfig:(id<TWTRAPIServiceConfig>)APIServiceConfig refreshStrategies:(NSArray *)refreshStrategies URLSession:(NSURLSession *)URLSession accessGroup:(nullable NSString *)accessGroup NS_DESIGNATED_INITIALIZER;
 
 - (NSString *)userSessionServiceName;

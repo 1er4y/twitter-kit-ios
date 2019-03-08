@@ -37,7 +37,7 @@ NSString *_Nullable decrementTweetPosition(NSString *tweetPosition);
 /**
  *  Creates an array of TWTRTweet instances from the dictionary of Collection API.
  *
- *  @param dictionary (required) The dictionary received from the collections API.
+ *  @param collection (required) The dictionary received from the collections API.
  *
  *  @return An array of `TWTRTweet` instances or nil.
  */
@@ -56,7 +56,7 @@ NSString *_Nullable decrementTweetPosition(NSString *tweetPosition);
 /**
  *  Returns the minimum tweet ID returned from the Collection API.
  *
- *  @param dictionary (required) The dictionary received from the collections API.
+ *  @param collection (required) The dictionary received from the collections API.
  *
  *  @return The ID of the oldest tweet returned or nil.
  */

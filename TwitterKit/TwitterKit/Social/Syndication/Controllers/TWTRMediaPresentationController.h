@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
  * Initializes the presenter with a view that will be animated.
  *
  * @param transitionView the view that will be animated during the transition
- * @param initialFrame the initial frame of the view
+ * @param frame the initial frame of the view
  * @param targetFrame the frame that the view will be transition to
  * @param completion a block to invoke when the transition has completed.
  */

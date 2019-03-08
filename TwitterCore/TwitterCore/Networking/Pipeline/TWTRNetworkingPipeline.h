@@ -52,8 +52,6 @@ typedef void (^TWTRNetworkingPipelineCallback)(NSData *_Nullable data, NSURLResp
  *
  * @param request The HTTP Request to send
  * @param sessionStore The session store that will provide the session.
- * @param userID The userId to sign the request for or nil if using the guest session
- * @param completion The completion block to invoke on completion.
  */
 - (NSProgress *)enqueueRequest:(NSURLRequest *)request sessionStore:(id<TWTRSessionStore>)sessionStore;
 - (NSProgress *)enqueueRequest:(NSURLRequest *)request sessionStore:(id<TWTRSessionStore>)sessionStore requestingUser:(nullable NSString *)userID;

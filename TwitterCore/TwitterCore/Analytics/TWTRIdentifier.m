@@ -69,7 +69,7 @@ static BOOL isTrackingForAdvertisingEnabled()
 #endif
 
 // This is intentionally named in order to not contain the string 'advertisingIdentifier'
-NSString *TWTRIdentifierForAdvertising()
+NSString *TWTRIdentifierForAdvertising(void)
 {
 #if IS_UIKIT_AVAILABLE
     if (isTrackingForAdvertisingEnabled()) {

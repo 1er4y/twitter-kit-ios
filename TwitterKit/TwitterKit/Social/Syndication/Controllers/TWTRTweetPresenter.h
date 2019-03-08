@@ -69,7 +69,7 @@ typedef NS_OPTIONS(NSInteger, TWTRTweetEntityDisplayType) {
 /**
  *  Returns the retweeted by attribution text given a retweet.
  *
- *  @param tweet retweet
+ *  @param retweet retweet
  *
  *  @return retweeted by attribution text string
  */

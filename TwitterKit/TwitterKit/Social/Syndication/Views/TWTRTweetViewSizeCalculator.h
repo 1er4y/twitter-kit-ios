@@ -39,8 +39,8 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param tweet           the Tweet
  *  @param style           the style of the Tweet view
- *  @param fittingWidth    the width of the Tweet
- *  @param showingActions  whether the Tweet view will be displaying actions
+ *  @param width    the width of the Tweet
+ *  @param showActions  whether the Tweet view will be displaying actions
  *
  *  @return the calculated height of the Tweet view
  */

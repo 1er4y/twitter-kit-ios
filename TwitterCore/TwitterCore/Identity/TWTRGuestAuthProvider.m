@@ -93,7 +93,7 @@
  *  Prepares the expected guest response dictionary from different sources containing the guest and
  *  auth tokens.
  *
- *  @param validationResponseDict validated response from activating a new guest token
+ *  @param responseDict validated response from activating a new guest token
  *
  *  @return dictionary containing both the newly activated guest token and provided app token
  */

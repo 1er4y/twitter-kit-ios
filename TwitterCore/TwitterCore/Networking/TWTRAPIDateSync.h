@@ -30,7 +30,6 @@
 
 /**
  *  @param response     response from the API request
- *  @param responseData data from the request response
  */
 - (nullable instancetype)initWithHTTPResponse:(nullable NSURLResponse *)response NS_DESIGNATED_INITIALIZER;
 

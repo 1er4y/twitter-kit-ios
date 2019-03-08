@@ -191,7 +191,7 @@ typedef NSArray *_Nonnull (^TWTRTimelineParsedResponseHandler)(id parsedResponse
  *  Favorites a single Tweet. Returns the new likedd version of Tweet from the perspective of
  *  the currently logged-in API user.
  *
- *  @param tweet      (required) The Tweet ID to like.
+ *  @param tweetID      (required) The Tweet ID to like.
  *  @param completion Completion block to be called on response. Called on the main queue.
  */
 - (void)likeTweetWithID:(NSString *)tweetID completion:(TWTRTweetActionCompletion)completion;
@@ -200,7 +200,7 @@ typedef NSArray *_Nonnull (^TWTRTimelineParsedResponseHandler)(id parsedResponse
  *  Unfavorites a single Tweet. Returns the new liked version of Tweet from the perspective of
  *  the currently logged-in API user.
  *
- *  @param tweet      (required) The Tweet ID to unlike.
+ *  @param tweetID      (required) The Tweet ID to unlike.
  *  @param completion Completion block to be called on response. Called on the main queue.
  */
 - (void)unlikeTweetWithID:(NSString *)tweetID completion:(TWTRTweetActionCompletion)completion;
@@ -209,7 +209,7 @@ typedef NSArray *_Nonnull (^TWTRTimelineParsedResponseHandler)(id parsedResponse
  *  Retweets a single Tweet. Returns the new retweeted version of Tweet from the perspective of
  *  the currently logged-in API user.
  *
- *  @param tweet      (required) The Tweet ID to retweet.
+ *  @param tweetID      (required) The Tweet ID to retweet.
  *  @param completion Completion block to be called on response. Called on the main queue.
  */
 - (void)retweetTweetWithID:(NSString *)tweetID completion:(TWTRTweetActionCompletion)completion;
@@ -218,7 +218,7 @@ typedef NSArray *_Nonnull (^TWTRTimelineParsedResponseHandler)(id parsedResponse
  *  Unretweets a single Tweet. Returns the new unretweeted version of Tweet from the perspective of
  *  the currently logged-in API user.
  *
- *  @param tweet      (required) The Tweet ID to unretweet.
+ *  @param tweetID      (required) The Tweet ID to unretweet.
  *  @param completion Completion block to be called on response. Called on the main queue.
  */
 - (void)unretweetTweetWithID:(NSString *)tweetID completion:(TWTRTweetActionCompletion)completion;
@@ -235,7 +235,7 @@ typedef NSArray *_Nonnull (^TWTRTimelineParsedResponseHandler)(id parsedResponse
 /**
  *  Create and send a Tweet given a text and media ID. Returns either a TWTRTweet or an NSError.
  *
- *  @param text        The text for a Tweet
+ *  @param tweetText        The text for a Tweet
  *  @param mediaID     (required) The media ID of the object that was uploaded to be attached to this Tweet.
  *  @param completion  The completion handler to invoke.
  */

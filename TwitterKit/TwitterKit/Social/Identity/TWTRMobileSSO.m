@@ -41,10 +41,8 @@
 
     NSURL *twitterAuthURL = [self.loginURLParser twitterAuthorizeURL];
 
-    BOOL iOS10 = [[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)];
-
     // Attempt to open Twitter app with Mobile SSO URL
-    if (iOS10) {
+    if (@available(iOS 10.0, *)) {
         [[UIApplication sharedApplication] openURL:twitterAuthURL
             options:@{}
             completionHandler:^(BOOL success) {
