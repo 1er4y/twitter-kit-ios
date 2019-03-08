@@ -347,7 +347,7 @@ static void *TSETweetTextKVOCOntext = &TSETweetTextKVOCOntext;
         [self.tableView.topAnchor constraintEqualToAnchor:self.tweetTextViewContainer.bottomAnchor].active = YES;
         [self.tableView.widthAnchor constraintEqualToAnchor:self.contentView.widthAnchor].active = YES;
 
-        [self.tweetTextViewContainer addObserver:self forKeyPath:NSStringFromSelector(@selector(bounds)) options:NSKeyValueObservingOptionNew context:TWTRSETweetTextViewContainerBoundsSizeKVOContext];
+        [self.tweetTextViewContainer addObserver:self forKeyPath:NSStringFromSelector(@selector(bounds)) options:NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew context:TWTRSETweetTextViewContainerBoundsSizeKVOContext];
         self.registeredForTweetTextViewContainerBoundsSizeKVO = YES;
 
         [self.tableView addObserver:self forKeyPath:NSStringFromSelector(@selector(contentSize)) options:NSKeyValueObservingOptionNew context:TWTRSETableViewContentSizeKVOContext];
@@ -415,7 +415,7 @@ static void *TSETweetTextKVOCOntext = &TSETweetTextKVOCOntext;
     _contentViewHeightConstraint.active = NO;
     if (@available(iOS 11.0, *)) {
         _scrollViewTopConstraint.active = NO;
-        _scrollViewTopConstraint = [_scrollView.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:self.navigationController.navigationBar.frame.size.height];
+        _scrollViewTopConstraint = [_scrollView.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:0];
         _scrollViewTopConstraint.active = YES;
     }
     _tableViewHeightConstraint.active = NO;
@@ -463,11 +463,23 @@ static void *TSETweetTextKVOCOntext = &TSETweetTextKVOCOntext;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey, id> *)change context:(void *)context
 {
-    if (context == TWTRSETableViewContentSizeKVOContext || context == TWTRSETweetTextViewContainerBoundsSizeKVOContext) {
+    if (context == TWTRSETableViewContentSizeKVOContext) {
         self.preferredContentSize = (CGSize){.width = _tweetTextViewContainer.bounds.size.width, .height = self.contentViewHeight};
-
+      
         // this ensures that when typing expands the bounds of the text view or
         // an attachment view replaces the spinner, everything is positioned correctly
+        [self _tseui_updateContentConstraintsWithSize:self.view.bounds.size];
+    } else if (context == TWTRSETweetTextViewContainerBoundsSizeKVOContext) {
+      
+        CGSize oldSize = [[change objectForKey:NSKeyValueChangeOldKey] CGRectValue].size;
+        CGSize newSize = [[change objectForKey:NSKeyValueChangeNewKey] CGRectValue].size;
+      
+        if (floorf(oldSize.width) == floorf(newSize.width) && floorf(oldSize.height) == floorf(newSize.height)) {
+          return;
+        }
+      
+        self.preferredContentSize = (CGSize){.width = _tweetTextViewContainer.bounds.size.width, .height = self.contentViewHeight};
+
         [self _tseui_updateContentConstraintsWithSize:self.view.bounds.size];
     } else if (context == TWTRSEDataSourceCursorSelectionKVOCOntext) {
         [self _tseui_updateAutoCompletion];
