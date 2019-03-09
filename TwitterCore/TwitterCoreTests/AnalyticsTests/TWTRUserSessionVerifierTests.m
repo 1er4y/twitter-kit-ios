@@ -98,19 +98,6 @@
     [self.userSessionVerifierMock verify];
 }
 
-- (void)testVerifyNowIfNecessary_shouldNotVerifyIfLessThanOneDay
-{
-    NSDate *now = [TWTRDateUtil UTCDateWithYear:2015 month:2 day:1 hour:0 minute:0 second:0];
-    NSDate *almostOneDayAhead = [TWTRDateUtil UTCDateWithYear:2015 month:2 day:1 hour:23 minute:59 second:59];
-    self.verifier.lastVerifiedTimestamp = now;
-
-    [TUDelorean temporarilyTimeTravelTo:almostOneDayAhead block:^(NSDate *date) {
-        [[self.userSessionVerifierMock reject] userSessionVerifierNeedsSessionVerification:OCMOCK_ANY];
-        [self.verifier verifyNowIfNecessary];
-        [self.userSessionVerifierMock verify];
-    }];
-}
-
 - (void)testVerifyNowIfNecessary_shouldCallDelegateIfValid
 {
     [[self.userSessionVerifierMock expect] userSessionVerifierNeedsSessionVerification:OCMOCK_ANY];
