@@ -343,11 +343,11 @@
 		884F860A223265990088B497 /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAE73C21FB380D7005BEEAD /* EXTKeyPathCoding.h */; };
 		884F860D2232659A0088B497 /* EXTKeyPathCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = AAAE73C21FB380D7005BEEAD /* EXTKeyPathCoding.h */; };
 		884F860E223267720088B497 /* TWTRURLSessionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4D2FAB1B79217F0011C544 /* TWTRURLSessionConfig.m */; };
+		884F860F223267730088B497 /* TWTRURLSessionConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D4D2FAB1B79217F0011C544 /* TWTRURLSessionConfig.m */; };
 		884F8612223269550088B497 /* TWTRResourcesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 884F8610223269540088B497 /* TWTRResourcesUtil.m */; };
-		884F8614223269550088B497 /* TWTRResourcesUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 884F8611223269550088B497 /* TWTRResourcesUtil.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		88CA9C20223F8E5E00C5C86D /* TWTRCoreLanguage.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CA9C1C223F8E5E00C5C86D /* TWTRCoreLanguage.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		88CA9C21223F8E5E00C5C86D /* TWTRCoreLanguage.m in Sources */ = {isa = PBXBuildFile; fileRef = 88CA9C1F223F8E5E00C5C86D /* TWTRCoreLanguage.m */; };
-		88CA9C24223F8E8600C5C86D /* TWTRResourcesUtil_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 88CA9C23223F8E8500C5C86D /* TWTRResourcesUtil_Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		884F8613223269550088B497 /* TWTRResourcesUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 884F8610223269540088B497 /* TWTRResourcesUtil.m */; };
+		884F8614223269550088B497 /* TWTRResourcesUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 884F8611223269550088B497 /* TWTRResourcesUtil.h */; };
+		884F8615223269550088B497 /* TWTRResourcesUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 884F8611223269550088B497 /* TWTRResourcesUtil.h */; };
 		9236048719F18F5F00532281 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9236048619F18F5F00532281 /* CoreData.framework */; };
 		92B9AC9119DF359D00E8BC68 /* UserWithEmailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 92B9AC9019DF359D00E8BC68 /* UserWithEmailResponse.json */; };
 		92B9AC9319DF388E00E8BC68 /* UserWithEmptyEmailResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 92B9AC9219DF388E00E8BC68 /* UserWithEmptyEmailResponse.json */; };
@@ -1045,11 +1045,8 @@
 		7B964454199BDF27002117B5 /* TWTRKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TWTRKit.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		7B96448A199BE365002117B5 /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TwitterKitResources.bundle; sourceTree = "<group>"; };
 		7BEB12C119AFCBC400A86786 /* TwitterKit-module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = "TwitterKit-module.modulemap"; sourceTree = "<group>"; };
-		884F8610223269540088B497 /* TWTRResourcesUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TWTRResourcesUtil.m; path = ../Social/Syndication/Utilities/TWTRResourcesUtil.m; sourceTree = "<group>"; };
-		884F8611223269550088B497 /* TWTRResourcesUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TWTRResourcesUtil.h; path = ../Social/Syndication/Utilities/TWTRResourcesUtil.h; sourceTree = "<group>"; };
-		88CA9C1C223F8E5E00C5C86D /* TWTRCoreLanguage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTRCoreLanguage.h; sourceTree = "<group>"; };
-		88CA9C1F223F8E5E00C5C86D /* TWTRCoreLanguage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTRCoreLanguage.m; sourceTree = "<group>"; };
-		88CA9C23223F8E8500C5C86D /* TWTRResourcesUtil_Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTRResourcesUtil_Private.h; sourceTree = "<group>"; };
+		884F8610223269540088B497 /* TWTRResourcesUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWTRResourcesUtil.m; sourceTree = "<group>"; };
+		884F8611223269550088B497 /* TWTRResourcesUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWTRResourcesUtil.h; sourceTree = "<group>"; };
 		9236048619F18F5F00532281 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		92B9AC9019DF359D00E8BC68 /* UserWithEmailResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; lineEnding = 0; path = UserWithEmailResponse.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		92B9AC9219DF388E00E8BC68 /* UserWithEmptyEmailResponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; lineEnding = 0; path = UserWithEmptyEmailResponse.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
@@ -1627,6 +1624,8 @@
 		3D682B5218E25A2C00145716 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				884F8611223269550088B497 /* TWTRResourcesUtil.h */,
+				884F8610223269540088B497 /* TWTRResourcesUtil.m */,
 				BFE839401ADF16C70035CBA1 /* TWTRConstants_Private.h */,
 				BFE839411ADF16C70035CBA1 /* TWTRConstants_Private.m */,
 				3D2384691AA93023006D98CB /* TwitterKit-Prefix.pch */,
@@ -1940,11 +1939,6 @@
 		3DDAD3DB19AFB3EC007E8E40 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				88CA9C23223F8E8500C5C86D /* TWTRResourcesUtil_Private.h */,
-				884F8611223269550088B497 /* TWTRResourcesUtil.h */,
-				884F8610223269540088B497 /* TWTRResourcesUtil.m */,
-				88CA9C1C223F8E5E00C5C86D /* TWTRCoreLanguage.h */,
-				88CA9C1F223F8E5E00C5C86D /* TWTRCoreLanguage.m */,
 				7B154E6B19D33A5300B6B64C /* TWTRBezierPaths.h */,
 				7B154E6C19D33A5300B6B64C /* TWTRBezierPaths.m */,
 				7B154E6F19D34B4700B6B64C /* TWTRBirdView.h */,
@@ -2648,7 +2642,6 @@
 				AAF0C99E2011991B0057F438 /* TWTRSETweetAttachment.h in Headers */,
 				373C8A181A83F874005A02D9 /* TWTRJSONSerialization.h in Headers */,
 				AAF0C9B52011991B0057F438 /* TWTRSESimpleTextTableViewCell.h in Headers */,
-				88CA9C24223F8E8600C5C86D /* TWTRResourcesUtil_Private.h in Headers */,
 				3D8F65421AC28AD2003876F8 /* TWTRTweet_Constants.h in Headers */,
 				37050B7F1C77C13300E110F8 /* TWTRStore.h in Headers */,
 				F5154B8519D4E6220054DECF /* TWTRComposer.h in Headers */,
@@ -2663,7 +2656,6 @@
 				AAF0C9B92011991B0057F438 /* TWTRSESelectionTableViewController.h in Headers */,
 				DB6B8A9E1C4F469C0059B277 /* TWTRJSONValidator.h in Headers */,
 				3799F2FE1CE687EE001B2DDE /* TWTRTimelineMessageView.h in Headers */,
-				88CA9C20223F8E5E00C5C86D /* TWTRCoreLanguage.h in Headers */,
 				AACD61C11F7B20BD00AD7B55 /* TWTRVideoPlayerView_Private.h in Headers */,
 				AAF0C9CF2011991B0057F438 /* TWTRSEConfigurationSelectionTableViewCell.h in Headers */,
 				3D9B83241A8C1A25008F0B62 /* TWTRAPIConstantsTimelines.h in Headers */,
@@ -2767,6 +2759,7 @@
 				BF318F041AE03B4E0082353A /* TWTRTweetView.h in Headers */,
 				BF318F051AE03B610082353A /* TWTRTweetTableViewCell.h in Headers */,
 				DB610F301CAC6E60006F93E0 /* TWTRTweetUserMentionEntity.h in Headers */,
+				884F8615223269550088B497 /* TWTRResourcesUtil.h in Headers */,
 				BFE839AA1ADF28FB0035CBA1 /* TWTRAPIConstantsTimelines.h in Headers */,
 				DBD3635C1D7654E1006C3642 /* TWTRMediaContainerViewController.h in Headers */,
 				BFE839A91ADF28F80035CBA1 /* TWTRAPIConstantsStatus.h in Headers */,
@@ -2813,10 +2806,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A976550818E0B29B00E25169 /* Build configuration list for PBXNativeTarget "TwitterKit-static" */;
 			buildPhases = (
-				A976557118E0B87D00E25169 /* Headers */,
 				A97654E118E0B29B00E25169 /* Sources */,
 				A97654E218E0B29B00E25169 /* Frameworks */,
 				A97654E318E0B29B00E25169 /* Copy Files */,
+				A976557118E0B87D00E25169 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -2832,9 +2825,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFE8397C1ADF23590035CBA1 /* Build configuration list for PBXNativeTarget "TwitterKit" */;
 			buildPhases = (
-				BFE8395D1ADF23590035CBA1 /* Headers */,
 				BFE8395B1ADF23590035CBA1 /* Sources */,
 				BFE8395C1ADF23590035CBA1 /* Frameworks */,
+				BFE8395D1ADF23590035CBA1 /* Headers */,
 				BFE8395E1ADF23590035CBA1 /* Resources */,
 			);
 			buildRules = (
@@ -3185,7 +3178,6 @@
 				6C45B2DC1B013FAA00CD0FF2 /* TWTRTwitterAPIServiceConfig.m in Sources */,
 				DB52BC611B98ED1D001715A4 /* TWTRTwitterText.m in Sources */,
 				374719A81C50608E00ADCA65 /* TWTRTimestampLabel.m in Sources */,
-				88CA9C21223F8E5E00C5C86D /* TWTRCoreLanguage.m in Sources */,
 				37D056D619772D61009F62D7 /* TWTRVerifiedView.m in Sources */,
 				DBD4E2211DB82E3A00E9968A /* TWTRTweetContentView.m in Sources */,
 				DB36E0041CEA3EF7002F959A /* TWTRVideoCTAView.m in Sources */,
@@ -3285,6 +3277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				884F8613223269550088B497 /* TWTRResourcesUtil.m in Sources */,
+				884F860F223267730088B497 /* TWTRURLSessionConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
